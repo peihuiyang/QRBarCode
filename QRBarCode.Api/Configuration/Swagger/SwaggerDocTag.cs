@@ -22,6 +22,7 @@ namespace QRBarCode.Api.Configuration.Swagger
             swaggerDoc.Tags = new List<OpenApiTag>
             {
                 //添加控制器类描述
+                new OpenApiTag{Name = "Health",Description = "健康检查"},
                 new OpenApiTag{Name = "QRCode",Description = "二维码"},
                 new OpenApiTag{Name = "BarCode",Description = "条形码"},
             };

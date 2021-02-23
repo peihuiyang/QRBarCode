@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using QRBarCode.Api.Configuration.Log;
+using QRBarCode.Api.Configuration.CustLog;
 
 namespace QRBarCode.Api
 {

@@ -4,6 +4,22 @@
         <name>QRBarCode.Api</name>
     </assembly>
     <members>
+        <member name="T:QRBarCode.Api.Configuration.Consul.ConsulHelper">
+            <summary>
+            Consul帮助类
+            </summary>
+        </member>
+        <member name="M:QRBarCode.Api.Configuration.Consul.ConsulHelper.ConsulRegister(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Consul注册
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="T:QRBarCode.Api.Configuration.CustLog.Log4NetExtend">
+            <summary>
+            日志拓展类
+            </summary>
+        </member>
         <member name="T:QRBarCode.Api.Configuration.Filters.HttpGlobalExceptionFilter">
             <summary>
             全局异常过滤器
@@ -58,9 +74,9 @@
             消息内容
             </summary>
         </member>
-        <member name="T:QRBarCode.Api.Configuration.Log.Log4NetExtend">
+        <member name="T:QRBarCode.Api.Configuration.Filters.SimpleAuthorizationFilter">
             <summary>
-            日志拓展类
+            简单的权限过滤
             </summary>
         </member>
         <member name="M:QRBarCode.Api.Configuration.RawRequestBodyFormatter.#ctor">
@@ -93,6 +109,17 @@
             </summary>
             <param name="swaggerDoc"></param>
             <param name="context"></param>
+        </member>
+        <member name="M:QRBarCode.Api.Controllers.HealthController.Check">
+            <summary>
+            健康检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QRBarCode.Api.Controllers.HealthController.Test">
+            <summary>
+            测试
+            </summary>
         </member>
         <member name="M:QRBarCode.Api.Controllers.v1.BarCodeController.Test(QRBarCode.EntityDto.CustBarCode.BarCodeCreateInput)">
             <summary>

@@ -16,6 +16,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Serialization;
 using QRBarCode.Api.Configuration;
+using QRBarCode.Api.Configuration.Consul;
 using QRBarCode.Api.Configuration.Filters;
 using QRBarCode.Api.Configuration.Swagger;
 
@@ -90,8 +91,8 @@ namespace QRBarCode.Api
                     TermsOfService = new Uri("https://github.com/peihuiyang/"),
                     Contact = new OpenApiContact
                     {
-                        Name = "杨培辉",
-                        Email = "2019070053@sanhepile.com",
+                        Name = "yangpeihui",
+                        Email = "1293035342@qq.com",
                         Url = new Uri("https://mail.qq.com/")
                     }
                 });
@@ -140,6 +141,10 @@ namespace QRBarCode.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            #region 注册服务到ConsulServer
+            this.Configuration.ConsulRegister();
+            #endregion
+
             #region Swagger中间件服务
             //启用中间件服务生成Swagger作为JSON终结点
             app.UseSwagger();
