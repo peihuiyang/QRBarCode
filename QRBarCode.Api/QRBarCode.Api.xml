@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QRBarCode.Api</name>
+    </assembly>
+    <members>
+        <member name="T:QRBarCode.Api.Configuration.Filters.HttpGlobalExceptionFilter">
+            <summary>
+            全局异常过滤器
+            </summary>
+        </member>
+        <member name="F:QRBarCode.Api.Configuration.Filters.HttpGlobalExceptionFilter._log">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="F:QRBarCode.Api.Configuration.Filters.HttpGlobalExceptionFilter._env">
+            <summary>
+            host主机
+            </summary>
+        </member>
+        <member name="M:QRBarCode.Api.Configuration.Filters.HttpGlobalExceptionFilter.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="env"></param>
+        </member>
+        <member name="M:QRBarCode.Api.Configuration.Filters.HttpGlobalExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            exception
+            </summary>
+            <param name="context">异常上下文</param>
+        </member>
+        <member name="T:QRBarCode.Api.Configuration.Filters.HttpGlobalExceptionFilter.ApplicationErrorResult">
+            <summary>
+            错误结果类
+            </summary>
+        </member>
+        <member name="M:QRBarCode.Api.Configuration.Filters.HttpGlobalExceptionFilter.ApplicationErrorResult.#ctor(System.Object)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:QRBarCode.Api.Configuration.Filters.HttpGlobalExceptionFilter.ErrorResponse">
+            <summary>
+            错误Response
+            </summary>
+        </member>
+        <member name="M:QRBarCode.Api.Configuration.Filters.HttpGlobalExceptionFilter.ErrorResponse.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="P:QRBarCode.Api.Configuration.Filters.HttpGlobalExceptionFilter.ErrorResponse.Message">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="T:QRBarCode.Api.Configuration.Log.Log4NetExtend">
+            <summary>
+            日志拓展类
+            </summary>
+        </member>
+        <member name="M:QRBarCode.Api.Configuration.RawRequestBodyFormatter.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:QRBarCode.Api.Configuration.RawRequestBodyFormatter.CanRead(Microsoft.AspNetCore.Mvc.Formatters.InputFormatterContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QRBarCode.Api.Configuration.RawRequestBodyFormatter.ReadAsync(Microsoft.AspNetCore.Mvc.Formatters.InputFormatterContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:QRBarCode.Api.Configuration.Swagger.SwaggerDocTag">
+            <summary>
+            接口文档注释
+            </summary>
+        </member>
+        <member name="M:QRBarCode.Api.Configuration.Swagger.SwaggerDocTag.Apply(Microsoft.OpenApi.Models.OpenApiDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)">
+            <summary>
+            添加控制器注释
+            </summary>
+            <param name="swaggerDoc"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:QRBarCode.Api.Controllers.v1.BarCodeController.Test(QRBarCode.EntityDto.CustBarCode.BarCodeCreateInput)">
+            <summary>
+            本地测试--将二维码生成图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QRBarCode.Api.Controllers.v1.BarCodeController.SaveToBytes(QRBarCode.EntityDto.CustBarCode.BarCodeCreateInput)">
+            <summary>
+            生成条形码为字节数组
+            </summary>
+            <param name="barCodeCreateInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QRBarCode.Api.Controllers.v1.BarCodeController.SaveToBase64(QRBarCode.EntityDto.CustBarCode.BarCodeCreateInput)">
+            <summary>
+            生成条形码为base64
+            </summary>
+            <param name="barCodeCreateInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QRBarCode.Api.Controllers.v1.QRCodeController.Test(QRBarCode.EntityDto.CustQRCode.QRCodeCreateInput)">
+            <summary>
+            本地测试--将二维码生成图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:QRBarCode.Api.Controllers.v1.QRCodeController.CreateToBytes(QRBarCode.EntityDto.CustQRCode.QRCodeCreateInput)">
+            <summary>
+            生成二维码字节数组
+            </summary>
+            <param name="qRCodeCreateInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:QRBarCode.Api.Controllers.v1.QRCodeController.CreateToBase64(QRBarCode.EntityDto.CustQRCode.QRCodeCreateInput)">
+            <summary>
+            生成二维码Base64
+            </summary>
+            <param name="qRCodeCreateInput"></param>
+            <returns></returns>
+        </member>
+        <member name="F:QRBarCode.Api.Startup._Assemblies">
+            <summary>
+            程序集列表
+            </summary>
+        </member>
+        <member name="M:QRBarCode.Api.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            依赖注入
+            </summary>
+            <param name="container"></param>
+        </member>
+    </members>
+</doc>
